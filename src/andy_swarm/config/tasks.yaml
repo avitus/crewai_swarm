@@ -1,0 +1,28 @@
+research_task:
+  description: >
+    Write a framework for an essay about {book} that addresses the following prompt: {prompt}
+  expected_output: >
+    An outline for a 2000 word essay with the following structure:
+    - Main Thesis (full paragraph)
+    - Point 1: a single sentence supporting the thesis 
+    - Point 2: a single sentence supporting the thesis
+    - Point 3: a single sentence supporting the thesis
+    - Conclusion
+  agent: researcher
+
+reporting_task:
+  description: >
+    Review the context you got and expand each Point into a full paragraph with the following structure:
+    - Point
+    - Evidence, primarily in the form of quotes from the book, {book}
+    - Analysis of the evidence relating it to the Point .    
+    - Evidence, primarily in the form of quotes from the book, {book}
+    - Analysis of the evidence relating it to the Point.
+    - Conclusion
+  expected_output: >
+    Main Thesis (full paragraph)
+    Paragraph for Point 1 (full paragraph)
+    Paragraph for Point 2 (full paragraph)
+    Paragraph for Point 3 (full paragraph)
+    Conclusion (full paragraph)
+  agent: reporting_analyst

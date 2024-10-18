@@ -1,0 +1,20 @@
+[project]
+name = "andy_swarm"
+version = "0.1.0"
+description = "andy_swarm using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.74.2,<1.0.0"
+]
+
+[project.scripts]
+andy_swarm = "andy_swarm.main:run"
+run_crew = "andy_swarm.main:run"
+train = "andy_swarm.main:train"
+replay = "andy_swarm.main:replay"
+test = "andy_swarm.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
