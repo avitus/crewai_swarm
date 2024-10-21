@@ -26,3 +26,11 @@ reporting_task:
     Paragraph for Point 3 (full paragraph)
     Conclusion (full paragraph)
   agent: reporting_analyst
+
+continuity_task:
+  description: >
+    Ensure that the paragraphs in the essay on {book} are well connected and coherent.
+  expected_output: >
+    An essay on the book {book} with paragraphs that are well connected and coherent while still adhering to the original prompt: {prompt} and
+    structure.
+  agent: continuity_analyst

@@ -25,6 +25,13 @@ class AndySwarmCrew():
 			config=self.agents_config['reporting_analyst'],
 			verbose=True
 		)
+	
+	@agent
+	def continuity_analyst(self) -> Agent:
+		return Agent(
+			config=self.agents_config['continuity_analyst'],
+			verbose=True
+		)
 
 	@task
 	def research_task(self) -> Task:
@@ -37,6 +44,12 @@ class AndySwarmCrew():
 		return Task(
 			config=self.tasks_config['reporting_task'],
 			output_file='report.md'
+		)
+
+	@task
+	def continuity_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['continuity_task'],
 		)
 
 	@crew
